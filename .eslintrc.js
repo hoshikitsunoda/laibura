@@ -3,6 +3,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -12,11 +14,11 @@ module.exports = {
     },
   },
   rules: {
-    'react/react-in-jsx-scope': ,
+    'react/react-in-jsx-scope': 'off',
   },
   settings: {
     react: {
-      version: 'detect', 
+      version: 'detect',
     },
   },
 }
