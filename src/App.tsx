@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
-import TwoColumnLayout from './components/Layout/TwoColumnLayout'
+import * as Color from './constants/colors'
+import { TwoColumnLayout } from './components/Layout'
 
 /*
 create a component to set props and pass to each child component
@@ -13,8 +14,8 @@ const App: FC = () => {
       <TwoColumnLayout
         className="main"
         columnLeftWidth="200"
-        backgroundLeft="yellow"
-        backgroundRight="lime"
+        backgroundLeft={Color.NAVY}
+        backgroundRight={Color.MAIN}
         leftContent={<LeftContent />}
         rightContent={<RightContent />}
         boxShadow={true}
@@ -45,7 +46,7 @@ const LeftContent = () => (
 const RightContent = () => (
   <>
     {[1, 2, 3].map((item) => (
-      <div key={item} style={{ height: '200px', backgroundColor: 'tomato', margin: '1rem' }}>
+      <div key={item} style={{ height: '200px', backgroundColor: Color.GREEN, margin: '2rem', padding: '1rem' }}>
         <h1>Content {item}</h1>
       </div>
     ))}

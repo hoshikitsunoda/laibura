@@ -1,0 +1,5 @@
+export const MAIN = '#ffeef2'
+export const NAVY = '#173753'
+export const RED = '#F25F5C'
+export const GREEN = '#A5FFD6'
+export const BLUE = '#7D8CC4'
