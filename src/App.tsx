@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 import * as Color from './constants/colors'
 import { TwoColumnLayout } from './components/Layout'
+import { LeftContent, RightContent } from './components/Layout/TwoColumnLayout/Example'
 
 /*
 create a component to set props and pass to each child component
@@ -24,33 +25,5 @@ const App: FC = () => {
     </>
   )
 }
-
-const LeftContent = () => (
-  <>
-    <header>My Blog</header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#archive">Archive</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </>
-)
-const RightContent = () => (
-  <>
-    {[1, 2, 3].map((item) => (
-      <div key={item} style={{ height: '200px', backgroundColor: Color.GREEN, margin: '2rem', padding: '1rem' }}>
-        <h1>Content {item}</h1>
-      </div>
-    ))}
-  </>
-)
 
 export default App

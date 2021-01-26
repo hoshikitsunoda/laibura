@@ -1,5 +1,6 @@
 import { ReactNode, FC } from 'react'
 import styled from 'styled-components'
+import device from '../../../constants/device'
 
 interface Props {
   className?: string
@@ -23,6 +24,7 @@ const TwoColumnLayout: FC<Props> = ({
   fullHeight,
   ...props
 }: Props) => {
+  console.log(device)
   return (
     <>
       <Wrapper
@@ -54,6 +56,10 @@ const Wrapper = styled(({ className, leftContent, rightContent }: Props) => {
 })`
   display: flex;
   height: ${({ fullHeight }) => (fullHeight ? '100vh' : null)};
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+  }
 
   & > div:first-child {
     flex: ${({ columnLeftWidth }) => columnLeftWidth}px 0 0;
