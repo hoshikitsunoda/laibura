@@ -34,3 +34,16 @@ export const handleButtonSize = (size: string | undefined): string => {
       return '1rem 1.1rem'
   }
 }
+
+export const handleTextColor = (color: string | undefined): string => {
+  switch (color) {
+    case 'primary':
+      return Color.MAIN
+    case 'secondary':
+      return Color.NAVY
+    case 'error':
+      return Color.RED
+    default:
+      return '#000'
+  }
+}
